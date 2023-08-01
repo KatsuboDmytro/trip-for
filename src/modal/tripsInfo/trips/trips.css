@@ -1,0 +1,47 @@
+
+.trips {
+  display: flex;
+  padding: 40px 0px 60px 60px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.trip {
+  height: max-content;
+  width: max-content;
+  border: 1px solid #F6F6F6;
+  &:hover {
+    border: 1px solid #8BC7FF;
+  }
+
+  & .image {
+    width: 212px;
+  }
+
+  & .info {
+    padding: 0px 25px 25px;
+
+    & .cityName {
+      font-weight: medium;
+      font-size: 0.875rem;
+      letter-spacing: 0.5px;
+    }
+
+    & span {
+      font-size: 0.875rem;
+      color: #9B9B9B;
+    }
+  }
+}
+
+.createTrip {
+  background-color: #F2F4F8;
+  width: 200px;
+  height: 183px;
+  text-align: center;
+
+  & img {
+    position: relative;
+    top: 40%;
+  }
+}

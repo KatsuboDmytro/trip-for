@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 50px 0px;
+  margin-bottom: 70px;
+  z-index: 10;
+  background-color: none;
+
+  & svg {
+    margin-right: 20px;
+  }
+
+  & .registration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vmin;
+    font-size: 1rem;
+
+    & .signin:hover, .signup:hover {
+      text-decoration: underline;
+      color: #5F5F5F;
+      cursor: pointer;
+    }
+  }
+}
