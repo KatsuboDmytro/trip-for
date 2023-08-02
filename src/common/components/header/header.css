@@ -6,6 +6,7 @@
   margin-bottom: 70px;
   z-index: 10;
   background-color: none;
+  color: white;
 
   & svg {
     margin-right: 20px;
@@ -15,12 +16,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40vmin;
+    width: 30vmin;
     font-size: 1rem;
 
     & .signin:hover, .signup:hover {
       text-decoration: underline;
-      color: #5F5F5F;
+      color: #A59FFF;
       cursor: pointer;
     }
   }

@@ -27,8 +27,28 @@ input {
 }
 
 .townInfo {
-  position: relative;
+  position: absolute;
   top: 0;
+  right: 0;
+  height: 70vmax;
   width: 33%;
-  background-color: blue;
+}
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+/*Track*/
+::-webkit-scrollbar-track{
+  background: #110E3B;
+}
+
+/*Handle*/
+::-webkit-scrollbar-thumb{
+  background: #1D1A45;
+}
+
+/*Handle on hover*/
+::-webkit-scrollbar-track:hover{
+  background: #2A284B;
 }
