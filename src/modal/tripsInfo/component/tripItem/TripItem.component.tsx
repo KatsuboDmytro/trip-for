@@ -1,24 +1,9 @@
 import { FC } from 'react';
-import { useGetWeekWeatherQuery } from '../../../api/repository';
-import { img } from '../../../../constants/images'
+import { img } from '../../../../constants/images';
+
 interface TripItemProps {}
 
 export const TripItem: FC<TripItemProps> = () => {
-  const { data, error, isLoading } = useGetWeekWeatherQuery({ place: 'Kyiv'! })
-
-  if(isLoading) {
-    return (
-      <div>Loading...</div>
-    )
-  }
-
-  if(error) {
-    return (
-      <div>Error.</div>
-    )
-  }
-
-  console.log(data);
 
   return (
     <article className='trip'>

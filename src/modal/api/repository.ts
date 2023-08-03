@@ -11,8 +11,8 @@ export const weatherApi = createApi({
   }),
   endpoints: (builder) => ({
     getWeekWeather: builder.query<WeatherInDTO, any>({
-      query: ({place}) => ({
-        url: `/${place}/next1days?unitGroup=us&key=${API_KEY}`,
+      query: ({place, days}) => ({
+        url: `/${place}/next${days}days?unitGroup=us&key=${API_KEY}`,
         method: 'get',
       })
     })

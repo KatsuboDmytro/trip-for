@@ -1,14 +1,20 @@
 import { FC } from 'react';
-import {sunny} from '../../../../constants/images';
+import { rainingDay, sunnyDay, cloudyDay } from '../../../../constants/images';
+import { Day } from '../../../api/dto/weather.dto';
+import { useCelsiusValue, useDayOfTheWeek } from '../../../../hooks/dayOfTheWeek';
 
-interface WeatherDayProps {}
+export const WeatherDay: FC<Day> = ({ datetime, tempmax, tempmin, icon }) => {
+  const day = useDayOfTheWeek(datetime);
+  const {celsiusValueMax, celsiusValueMin} = useCelsiusValue({ tempmax, tempmin });
 
-export const WeatherDay: FC<WeatherDayProps> = () => {
   return (
     <div className='weatherDay'>
-      <div className="dayOfWeek">Monday</div>
-      <img src={sunny} alt="sunny" className="illustration" />
-      <div className="temperature">28°/21°</div>
+      <div className="dayOfWeek">{day}</div>
+      <img src={icon === 'rain' ? rainingDay : icon === 'clear-day' ? sunnyDay : icon === 'partly-cloudy-day' ? cloudyDay : ''} 
+        alt={icon === 'rain' ? 'rainingDay' : icon === 'clear-day' ? 'sunnyDay' : icon === 'partly-cloudy-day' ? 'cloudyDay' : ''} 
+        className="illustration" 
+      />
+      <div className="temperature">{celsiusValueMax}°/{celsiusValueMin}°</div>
     </div>
   );
 }
